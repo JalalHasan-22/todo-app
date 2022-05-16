@@ -1,0 +1,23 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 15px;
+  box-shadow: 5px 5px 10px #271b0d;
+  justify-content: center;
+
+  label {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: large;
+      font-weight: 500;
+    }
+
+    input {
+      border-radius: 5px;
+      background: none;
+    }
+  }
+}
