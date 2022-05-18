@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 export const SettingContext = React.createContext();
 
-export default function Setting(props) {
+export default function Setting({ children }) {
   const [items, setItems] = useState(5);
   const [hideCompletedItems, setHideCompletedItems] = useState(false);
   const [sort, setSort] = useState(false);
@@ -14,7 +14,7 @@ export default function Setting(props) {
   };
 
   useEffect(async () => {
-    let userSettings = await JSON.parse(localStorage.getItem("settings"));
+    let userSettings = await JSON.parse(localStorage.getItem('settings'));
 
     if (userSettings) {
       setHideCompletedItems(userSettings.hideCompletedItems);
@@ -24,8 +24,6 @@ export default function Setting(props) {
   });
 
   return (
-    <SettingContext.Provider value={state}>
-      {props.children}
-    </SettingContext.Provider>
+    <SettingContext.Provider value={state}>{children}</SettingContext.Provider>
   );
 }

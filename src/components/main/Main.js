@@ -1,16 +1,14 @@
-import React, { useEffect, useState, useContext } from "react";
-import useForm from "../../hooks/form.js";
+import React, { useEffect, useState, useContext } from 'react';
+import useForm from '../../hooks/form.js';
 
-import { v4 as uuid } from "uuid";
-import Header from "../header/Header.js";
-import Form from "../form/Form.js";
-import List from "../list/List.js";
-import Setting from "../../context/Setting.js";
-import SettingsForm from "../settings-form/SettingsForm.js";
-import { Container, Row, Col } from "react-bootstrap";
-import "./main.scss";
-
-import { SettingContext } from "../../context/Setting";
+import { v4 as uuid } from 'uuid';
+import Header from '../header/Header.js';
+import Form from '../form/Form.js';
+import List from '../list/List.js';
+import Setting from '../../context/Setting.js';
+import SettingsForm from '../settings-form/SettingsForm.js';
+import { Container, Row, Col } from 'react-bootstrap';
+import './main.scss';
 
 const Main = () => {
   const [list, setList] = useState([]);
@@ -54,10 +52,10 @@ const Main = () => {
   return (
     <>
       <Header incomplete={incomplete} />
-      <Container id="container">
-        <header id="sub-header">To Do List: {incomplete} items pending</header>
+      <Container id='container'>
+        <header id='sub-header'>To Do List: {incomplete} items pending</header>
 
-        <Row style={{ margin: "50px 0" }}>
+        <Row style={{ margin: '50px 0' }}>
           <Col sm={4}>
             <Form handleSubmit={handleSubmit} handleChange={handleChange} />
             <SettingsForm />

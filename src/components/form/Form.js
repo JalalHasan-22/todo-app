@@ -1,7 +1,7 @@
-import React from "react";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
-import "./form.scss";
+import './form.scss';
 
 export default function Form(props) {
   return (
@@ -12,9 +12,9 @@ export default function Form(props) {
         <span>To Do Item</span>
         <input
           onChange={props.handleChange}
-          name="text"
-          type="text"
-          placeholder="Item Details"
+          name='text'
+          type='text'
+          placeholder='Item Details'
         />
       </label>
 
@@ -22,9 +22,9 @@ export default function Form(props) {
         <span>Assigned To</span>
         <input
           onChange={props.handleChange}
-          name="assignee"
-          type="text"
-          placeholder="Assignee Name"
+          name='assignee'
+          type='text'
+          placeholder='Assignee Name'
         />
       </label>
 
@@ -33,20 +33,16 @@ export default function Form(props) {
         <input
           onChange={props.handleChange}
           defaultValue={3}
-          type="range"
+          type='range'
           min={1}
           max={5}
-          name="difficulty"
+          name='difficulty'
         />
       </label>
 
-      <Button variant="primary" type="submit">
+      <Button variant='primary' type='submit'>
         Add Item
       </Button>
-
-      {/* <label>
-        <button type="submit">Add Item</button>
-      </label> */}
     </form>
   );
 }
