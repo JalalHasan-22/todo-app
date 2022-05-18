@@ -6,10 +6,10 @@ import './form.scss';
 export default function Form(props) {
   return (
     <form onSubmit={props.handleSubmit}>
-      <h2>Add To Do Item</h2>
+      <h2>Add new item</h2>
 
       <label>
-        <span>To Do Item</span>
+        <span>Todo Item</span>
         <input
           onChange={props.handleChange}
           name='text'
@@ -19,7 +19,7 @@ export default function Form(props) {
       </label>
 
       <label>
-        <span>Assigned To</span>
+        <span>Assigned to</span>
         <input
           onChange={props.handleChange}
           name='assignee'
