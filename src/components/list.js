@@ -17,7 +17,6 @@ const List = (props) => {
   }
 
   const displayList = (list) => {
-    //may add more later
     if(settings.sortBy) {
       switch(settings.sortBy) {
         case 'difficultyLowToHigh':

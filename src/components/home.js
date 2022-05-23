@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import useForm from '../hooks/form.js';
 import List from './list.js';
 import ItemForm from './itemForm.js';
+import { Alert } from '@blueprintjs/core';
 
 import { v4 as uuid } from 'uuid';
 
 const Home = (props) => {
   const { handleChange, handleSubmit } = useForm(addItem);
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
-    let incompleteCount = props.list.filter(item => !item.complete).length;
+    let incompleteCount = props.list.filter((item) => !item.complete).length;
     props.setIncomplete(incompleteCount);
     document.title = `To Do List: ${props.incomplete}`;
   }, [props.list]);
@@ -22,22 +24,22 @@ const Home = (props) => {
     item.id = uuid();
     item.complete = false;
 
-    if(!props.list.includes(item)) {
+    if (!props.list.includes(item)) {
       props.setList([...props.list, item]);
     } else {
-      alert('Entry already exists')
+      alert('Entry Already Added to the list!');
     }
   }
 
   function deleteItem(id) {
-    const items = props.list.filter( item => item.id !== id );
+    const items = props.list.filter((item) => item.id !== id);
     props.setList(items);
   }
 
   function toggleComplete(id) {
-    const items = props.list.map( item => {
-      if ( item.id == id ) {
-        item.complete = ! item.complete;
+    const items = props.list.map((item) => {
+      if (item.id == id) {
+        item.complete = !item.complete;
       }
       return item;
     });
@@ -47,13 +49,16 @@ const Home = (props) => {
 
   return (
     <>
-      <div className="flex-container">
-        <ItemForm 
-          handleSubmit={handleSubmit} 
-          handleChange={handleChange} 
-        />
-      
-        {props.list.length > 0 && (<List list={props.list} deleteItem={deleteItem} toggleComplete={toggleComplete} /> )}
+      <div className='flex-container'>
+        <ItemForm handleSubmit={handleSubmit} handleChange={handleChange} />
+
+        {props.list.length > 0 && (
+          <List
+            list={props.list}
+            deleteItem={deleteItem}
+            toggleComplete={toggleComplete}
+          />
+        )}
       </div>
     </>
   );
