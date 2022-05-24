@@ -1,6 +1,5 @@
 {
-  "homepage": "http://Beers15.github.io/todo-app",
-  "name": "class-32-solution-todo",
+  "name": "todo-app",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -41,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
   }
 }
