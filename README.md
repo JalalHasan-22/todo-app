@@ -6,7 +6,7 @@ password: 123
 
 You can register as a new user as well, I've edited the post request to always have admin role and capablities.
 
-[Live URL](https://taupe-profiterole-8610bf.netlify.app/)
+## [Live URL](https://taupe-profiterole-8610bf.netlify.app/)
 
 ## UML Diagram
 
