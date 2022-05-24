@@ -1,5 +1,11 @@
 # Todo App
 
+Please use the following credentials to log in and use this application:
+username: jalal
+password: 123
+
+You can register as a new user as well, I've edited the post request to always have admin role and capablities.
+
 [Live URL](https://taupe-profiterole-8610bf.netlify.app/)
 
 ## UML Diagram
