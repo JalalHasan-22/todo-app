@@ -56,7 +56,7 @@ const SettingsForm = () => {
             <br />
 
             <RadioGroup
-              label='Show Completed Items'
+              label='Show Completed Items:'
               onChange={handleChange}
               selectedValue={selectedCompleteRadioBtn}
             >
@@ -75,7 +75,7 @@ const SettingsForm = () => {
             <br />
 
             <RadioGroup
-              label='Sort By'
+              label='Sort By:'
               onChange={handleChange}
               selectedValue={selectedSortRadioBtn}
             >
@@ -91,7 +91,7 @@ const SettingsForm = () => {
                 value='difficultyLowToHigh'
               />
               <Radio
-                label='Assignee'
+                label='Assignee Name'
                 onClick={(e) => setSelectedSortRadioBtn(e.target.value)}
                 value='assignee'
               />
