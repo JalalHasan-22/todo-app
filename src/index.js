@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import App from './app.js';
 import SettingsProvider from './context/settings';
@@ -9,13 +9,12 @@ import 'normalize.css';
 import '@blueprintjs/core/lib/css/blueprint.css';
 import '@blueprintjs/icons/lib/css/blueprint-icons.css';
 
-const root = document.getElementById('root');
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-ReactDOM.render(
+root.render(
   <SettingsProvider>
     <AuthProvider>
       <App />
     </AuthProvider>
-  </SettingsProvider>,
-  root
+  </SettingsProvider>
 );
