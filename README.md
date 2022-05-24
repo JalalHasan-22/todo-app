@@ -1,7 +1,7 @@
 # Todo App
 
-Please use the following credentials to log in and use this application:
-username: jalal
+Please use the following credentials to log in and use this application:<br>
+username: jalal <br>
 password: 123
 
 You can register as a new user as well, I've edited the post request to always have admin role and capablities.
