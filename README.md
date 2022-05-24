@@ -1,6 +1,6 @@
 # Todo App
 
-[Live URL](https://628506692a86ec00091e7a9e--stellular-syrniki-578e44.netlify.app/)
+[Live URL](https://taupe-profiterole-8610bf.netlify.app/)
 
 ## UML Diagram
 
